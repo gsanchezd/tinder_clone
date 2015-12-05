@@ -30,7 +30,7 @@ gem "slim-rails"
 
 gem 'net-ssh'
 gem 'carrierwave'
-gem "fog"
+gem "carrierwave-aws"
 gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
