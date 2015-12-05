@@ -1,10 +1,6 @@
 require 'test_helper'
-require 'pp'
 
 class InteractionTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
 
   test 'cant interact with myself' do
     i = Interaction.new(user_one:users(:one), user_two:users(:one))

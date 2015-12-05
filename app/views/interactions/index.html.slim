@@ -1,0 +1,13 @@
+- if @user
+	.col-md-4
+		= link_to "Dislike", interactions_dislike_path(user_id: @user.id)
+
+	.col-md-4
+		= @user.email
+		= image_tag @user.photos.first
+
+	.col-md-4
+		= link_to "Like", interactions_like_path(user_id: @user.id)
+
+- else
+	| No hay más personas en tu área
