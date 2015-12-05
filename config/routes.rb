@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/complete_profile'
+
+  get 'users/save_profile'
+
   get 'matches/index'
 
   get 'interactions/index'  
@@ -16,8 +20,17 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   devise_for :users, controllers: {
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
   }
+
+
+  devise_scope :user do 
+    get 'users/complete_profile', to: 'users#complete_profile'
+    patch 'users/save_profile', to: 'users#save_profile'
+  end
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

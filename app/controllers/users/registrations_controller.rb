@@ -36,6 +36,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -49,7 +50,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def after_sign_up_path_for(resource)
-    redirect_to interactions_index_path
+    interactions_index_path
     # super(resource)
   end
 

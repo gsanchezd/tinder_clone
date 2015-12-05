@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   has_many :matches_one, class_name: "Match", foreign_key: :user_one_id, dependent: :destroy
   has_many :matches_two, class_name: "Match", foreign_key: :user_two_id, dependent: :destroy
 
+  accepts_nested_attributes_for :photos, allow_destroy: true
+
   def interacted_users
     User.eager_load(:interactions_two).where("interactions.user_one_id = ?", self.id)
   end
