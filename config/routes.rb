@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'matches/index'
+
   get 'interactions/index'  
   get 'interactions/like'
   get 'interactions/dislike'
+  get 'matches/index'
+
   get 'pages/index'
 
 

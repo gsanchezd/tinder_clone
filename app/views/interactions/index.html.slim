@@ -1,10 +1,10 @@
 - if @user
-	.col-md-4
+	.col-md-1.col-md-offset-3
 		= link_to "Dislike", interactions_dislike_path(user_id: @user.id)
 
 	.col-md-4
 		= @user.email
-		= image_tag @user.photos.first
+		= image_tag @user.photos.first.photo, class: "img-responsive img-circle"
 
 	.col-md-4
 		= link_to "Like", interactions_like_path(user_id: @user.id)

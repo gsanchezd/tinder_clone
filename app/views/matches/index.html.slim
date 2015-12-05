@@ -1,0 +1,8 @@
+- @matches.each do |m|
+	- matched_user = m.get_user(current_user.id)
+	.row
+		.col-md-3
+			= image_tag matched_user.photos.first.photo, class: 'img-responsive img-circle'
+		.col-md-6
+			p= matched_user.email
+	hr
