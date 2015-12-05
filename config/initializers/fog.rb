@@ -9,7 +9,7 @@ else
     config.aws_credentials = {
       :access_key_id          => ENV['aws_access_key_id'],      # required
       :secret_access_key      => ENV['aws_secret_access_key'],  # required
-      :region                 => 'us-east-1',                   # optional, defaults to 'us-east-1'
+      :region                 => ENV['aws_region'],             # optional, defaults to 'us-east-1'
       # :host                   => 's3.amazonaws.com'
       #:host                   => 's3.example.com',             # optional, defaults to nil
       :endpoint               => 'http://s3.amazonaws.com' # optional, defaults to nil
