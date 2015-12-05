@@ -50,7 +50,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def after_sign_up_path_for(resource)
-    interactions_index_path
+    users_complete_profile_path
     # super(resource)
   end
 
