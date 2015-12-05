@@ -32,6 +32,7 @@ gem 'net-ssh'
 gem 'carrierwave'
 gem "carrierwave-aws"
 gem 'mini_magick'
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
