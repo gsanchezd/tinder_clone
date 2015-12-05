@@ -12,6 +12,7 @@ names = ["Alejandra", "Francisca", "Camila", "Marcela", "Javiera", "Diego", "Nic
 
 10.times do |i|
   u = User.new
+  u.name = names[i]
   u.email = names[i] + "@desafiolatam.com"
   u.password = "12345678"
 

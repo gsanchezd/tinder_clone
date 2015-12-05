@@ -1,4 +1,6 @@
 class InteractionsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     # We need all users that havent interacted with the current_user
     @user = current_user.next_user

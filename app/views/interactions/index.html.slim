@@ -4,7 +4,8 @@
 
 	.col-md-4
 		= @user.email
-		= image_tag @user.photos.first.photo, class: "img-responsive img-circle"
+		- unless @user.photos.empty?
+			= image_tag @user.photos.first.photo, class: "img-responsive img-circle"
 
 	.col-md-4
 		= link_to "Like", interactions_like_path(user_id: @user.id)
