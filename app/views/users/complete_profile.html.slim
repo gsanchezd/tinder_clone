@@ -1,0 +1,5 @@
+.well
+	= form_for @user, url: users_save_profile_path, html: {:multipart => true} do |f|
+		= f.fields_for :photos do |b|
+			=b.file_field :photo
+		= f.submit "Subir fotos", class:"btn btn-primary"
